@@ -1,0 +1,125 @@
+/* Splash screen full center */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: backgroundFade 2.5s ease;
+}
+
+/* Logo pop + rise */
+.logo {
+  width: 180px;
+  opacity: 0;
+  animation: popRise 1.2s ease-out forwards;
+}
+
+.slogan {
+  font-size: 1.6rem;
+  font-weight: 500;
+  opacity: 0;
+  margin-top: 20px;
+  color: #00bcd4;
+  animation: fadeInSlogan 1s ease-out 1.2s forwards;
+}
+
+@keyframes popRise {
+  0% {
+    transform: scale(0.6) translateY(40px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSlogan {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundFade {
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: #121212;
+  }
+}
+
+
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+#product-list div {
+  border: 1px solid #444;
+  padding: 10px;
+  width: 200px;
+  background-color: #1e1e1e;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+#product-list img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+button.add-cart {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.login-container {
+  max-width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  text-align: center;
+}
+
+input, button {
+  padding: 8px;
+  margin-top: 10px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+}
+.cart-button {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #00bcd4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s;
+}
+.cart-button:hover {
+  background-color: #0097a7;
+}
