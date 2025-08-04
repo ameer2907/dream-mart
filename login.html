@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <title>Login - Dream Mart</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="dark-mode">
   <div class="login-container">
+    <!-- Logo on top -->
+    <img src="assets/images/logo.png" alt="Dream Mart Logo" class="logo" style="max-width: 150px; margin-bottom: 20px;">
+    
     <h2>Login to Dream Mart</h2>
     <form onsubmit="return loginUser()">
       <input type="text" id="username" placeholder="Username" required><br>
@@ -15,6 +19,7 @@
       <button type="submit">Login</button>
     </form>
   </div>
+
   <script>
     function loginUser() {
       const username = document.getElementById('username').value;
