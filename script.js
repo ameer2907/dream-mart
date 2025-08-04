@@ -46,3 +46,4 @@ document.getElementById("search").addEventListener("input", (e) => {
   const filtered = products.filter(p => p.name.toLowerCase().includes(keyword));
   displayProducts(filtered);
 });
+
