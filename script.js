@@ -3,19 +3,16 @@ window.onload = function () {
   setTimeout(() => {
     document.getElementById("splash-screen").style.display = "none";
     document.getElementById("main-content").style.display = "block";
-  }, 2000);
+  }, 2500); // 2.5 seconds
 };
-// PRODUCT DATA
+
+// ✅ PRODUCT DATA with updated image paths
 const products = [
-  { name: "Wireless Earbuds", price: 999, image: "images/airpod.jpg" },
-  { name: "Smart Watch", price: 1499, image: "images/watch.jpg" },
-  { name: "Shirts", price: 399, image: "images/shirt.jpg" },
-  { name: "One Plus", price: 19000, image: "images/mobile.jpg" },
-  {
-    name: "Samsung Tv",
-    price: 50000,
-    image: "images/tv.jpg"
-  }
+  { name: "Wireless Earbuds", price: 999, image: "airpod.jpg" },
+  { name: "Smart Watch", price: 1499, image: "watch.jpg" },
+  { name: "Shirts", price: 399, image: "shirt.jpg" },
+  { name: "One Plus", price: 19000, image: "mobile.jpg" },
+  { name: "Samsung Tv", price: 50000, image: "tv.jpg" }
 ];
 
 // Render Products
@@ -49,10 +46,3 @@ document.getElementById("search").addEventListener("input", (e) => {
   const filtered = products.filter(p => p.name.toLowerCase().includes(keyword));
   displayProducts(filtered);
 });
-window.onload = function () {
-  setTimeout(() => {
-    document.getElementById("splash-screen").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
-  }, 2500); // 2.5 seconds
-};
-
